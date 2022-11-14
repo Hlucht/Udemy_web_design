@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <style>
+        .formLogin{
+            width: 300px;
+            margin: 50px auto 0;
+        }
+
+        .formLogin fieldset{
+            background-color: rgb(210, 210, 210);
+            border: none;
+            border-radius: 10px;
+            border: 1px solid cadetblue;
+            padding: 20px;
+        }
+
+        .formLogin legend{
+            background-color: cadetblue;
+            padding: 4px;
+        }
+
+        #user, #pass, .btn{
+            display: block;
+            width: 100%;
+            background-color: beige;
+            box-sizing: border-box;
+        }
+
+        input{
+            padding: 5px;
+            border: none;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        #user:focus, #pass:focus{
+            background-color: white;
+        }
+
+        .btn{
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="post" target="_blank" class="formLogin"> 
+        <fieldset> 
+            <legend>login</legend>
+            <label for="user">Digite seu usuário</label>
+            <input type="text" name="user" id="user" autofocus> <!--atributo name deve ser alinhado com o backend / quando a pagina for aberta o input ja ganhe foco -->
+
+            <label for="pass">Digite sua senha</label>
+            <input type="password" name="pass" id="pass"> <!--esse tipo permite que aparecam * no lugar dos caracteres-->
+
+            <input type="submit" value="login" class="btn"> <!--enviar dados / texto que vai dentro do botão-->
+        </fieldset>
+    </form>
+</body>
+</html>
