@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: sans-serif;
+    background-color: lightgray;
+}
+
+header{
+    color: white;
+    height: 600px;
+    background-image: url('./imagens/bg-3.jpg');
+    background-size: cover;
+    background-position: right center ;
+    text-align: center;
+    
+}
+
+header nav ul{
+    text-align: end;
+}
+header nav ul li{
+    list-style: none;
+    display: inline-block;
+    text-transform: uppercase;
+    margin-right: 15px;
+    margin-top: 15px;
+}
+
+header nav ul li a{
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+header nav ul li a:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+header h1{
+    text-transform: uppercase;
+    font-size: 70px;
+    text-shadow: 1px 1px 5px black;
+    margin-top: 120px;
+    
+}
+
+header p{
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-bottom: 3px solid white;
+    padding: 10px;
+    margin: auto;
+}
+
+
+main section{
+    width: 920px;
+    margin: auto;
+    margin-top: 15px;
+    background-color: white;
+    padding: 10px;
+}
+main section div{
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+main section div:nth-child(2){
+    margin: auto 5px;
+}
+
+main section div p{
+    display: block;
+    padding: 5px;
+    background-color: gray;
+}
+main section div img{
+    display: block;
+    width: 100%;
+}
+
+
+
+
+
+main section article{
+    width: 100%; 
+}
+main section article h1{
+    border-bottom: 2.5px solid lightgray;
+    padding: 5px;
+}
+
+main section article p{
+    padding: 5px;
+}
+
+
+footer{
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 3px black;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 15px;
+}
