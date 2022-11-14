@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+
+    <style>
+
+        body{
+            width: 50%;
+            margin: auto;
+        }
+
+        #um{
+            background-color: cadetblue;
+            padding: 10px;
+            width:80%;
+            height: 80px; /*se apenas a div um estivesse posicionada apenas ela se relacionaria*/
+        }
+
+        #dois{
+            background-color: aqua;
+            padding: 10px;
+            width:100%;
+            height: 50px;
+            position: relative; /*as div 2 e 3 estão se relacionando agora*/
+            /*static é elemento não posicionado, por isso ele não se relaciona*/
+            top: 20px; /*aS divS se movem, respeitando a hierarquia*/
+        }
+
+        #tres{
+            background-color: blueviolet;
+            width:25px;
+            height: 25px;
+            position: absolute; /* o elemento acompanha a pagina(documento)*/
+            bottom: 10px; /*controla a posição do elemento*/
+            right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Position</h1>
+
+    <p><a href="https://www.4devs.com.br/gerador_de_texto_lorem_ipsum">gerador de texto lorem ipsum</a></p>
+
+    <div id="container">
+
+        <div id="um"> 1
+            <div id="dois"> 2
+                <div id="tres"> 3</div>
+            </div>
+        </div>
+
+        <p>
+            Lorem ipsum elementum hac et lectus neque massa ornare lobortis, at consequat eros facilisis augue etiam per
+            tellus, quisque tincidunt justo metus aenean lorem aliquam ultrices.
+            vel ad magna sed elementum libero inceptos est accumsan, quisque magna elementum himenaeos pharetra faucibus
+            sodales, a sapien ac curae phasellus arcu euismod.
+            etiam inceptos class vitae etiam bibendum iaculis egestas sit gravida ligula bibendum congue fusce molestie
+            dui, turpis netus sociosqu nunc pellentesque quam eget nam tortor justo massa nullam rutrum.
+            pharetra dolor curabitur turpis gravida turpis nibh nisi feugiat orci, class eleifend id tristique etiam
+            vitae adipiscing habitasse rhoncus, purus ac suscipit mauris tortor aliquam metus potenti.
+        </p>
+        <p>
+            Quis ad placerat lacinia lacus tincidunt sodales ipsum maecenas sollicitudin quisque in donec ultricies
+            volutpat rhoncus, primis turpis tempor tincidunt ultrices massa quam per ad porttitor tempor nulla hac
+            taciti.
+            ornare odio ornare nisi convallis donec et proin eu, curae vitae vehicula sem semper facilisis vel etiam
+            elementum, eget class ante cursus dui faucibus habitasse.
+            posuere nullam luctus porta imperdiet cubilia curabitur id, ullamcorper vulputate ultricies elit fames cras
+            semper, lacus donec malesuada sapien lacinia bibendum, dapibus iaculis blandit eleifend vel vehicula.
+            commodo aliquam at tincidunt a donec lorem donec adipiscing velit, feugiat sollicitudin sem donec dui justo
+            purus aliquam, iaculis malesuada blandit rhoncus odio auctor condimentum mattis.
+        </p>
+
+        <p>
+            Dolor lobortis consequat faucibus habitant dictumst aenean volutpat etiam taciti fermentum, laoreet
+            porttitor urna imperdiet gravida consectetur nullam fermentum vehicula magna, aliquam quam quis non pharetra
+            praesent aliquam torquent urna.
+            class sed adipiscing aliquam fames et platea eros feugiat, torquent libero commodo diam himenaeos ultrices
+            platea quisque, aliquet rhoncus ipsum eros libero lorem donec.
+            cubilia mauris amet consectetur ac sodales vel mattis curabitur pretium, nisl libero ut himenaeos feugiat
+            egestas pretium mauris varius, ut turpis nulla dapibus luctus vestibulum lacinia nibh.
+            ante lobortis mattis curabitur aliquet dapibus turpis consequat vehicula, in congue posuere enim varius
+            tristique mattis, varius facilisis dapibus varius proin faucibus quam.
+        </p>
+    </div>
+</body>
+</html>
