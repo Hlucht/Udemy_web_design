@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
 }
+
 body{
     font-family: sans-serif;
     background-color: lightgray;
@@ -14,7 +15,6 @@ header{
     background-size: cover;
     background-position: right center ;
     text-align: center;
-    
 }
 
 header nav ul{
@@ -36,6 +36,7 @@ header nav ul li a{
     border: 1px solid white;
     background-color: rgba(0, 0, 0, 0.2);
 }
+
 header nav ul li a:hover{
     background-color: rgba(0, 0, 0, 0.5);
 }
@@ -45,7 +46,6 @@ header h1{
     font-size: 70px;
     text-shadow: 1px 1px 5px black;
     margin-top: 120px;
-    
 }
 
 header p{
@@ -56,7 +56,6 @@ header p{
     margin: auto;
 }
 
-
 main section{
     width: 920px;
     margin: auto;
@@ -64,6 +63,7 @@ main section{
     background-color: white;
     padding: 10px;
 }
+
 main section div{
     text-transform: uppercase;
     display: inline-block;
@@ -78,18 +78,16 @@ main section div p{
     padding: 5px;
     background-color: gray;
 }
+
 main section div img{
     display: block;
     width: 100%;
 }
 
-
-
-
-
 main section article{
     width: 100%; 
 }
+
 main section article h1{
     border-bottom: 2.5px solid lightgray;
     padding: 5px;
@@ -98,7 +96,6 @@ main section article h1{
 main section article p{
     padding: 5px;
 }
-
 
 footer{
     color: white;

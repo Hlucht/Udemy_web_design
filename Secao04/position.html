@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,6 @@
     <title>Position</title>
 
     <style>
-
         body{
             width: 50%;
             margin: auto;
@@ -18,7 +17,7 @@
             background-color: cadetblue;
             padding: 10px;
             width:80%;
-            height: 80px; /*se apenas a div um estivesse posicionada apenas ela se relacionaria*/
+            height: 80px; /*se apenas a div 'um' estivesse posicionada apenas ela se relacionaria*/
         }
 
         #dois{
@@ -26,8 +25,8 @@
             padding: 10px;
             width:100%;
             height: 50px;
-            position: relative; /*as div 2 e 3 estão se relacionando agora*/
-            /*static é elemento não posicionado, por isso ele não se relaciona*/
+            position: relative; /*as div 'dois' e 'três' estão se relacionando agora*/
+            /*'static' é um elemento não posicionado, por isso ele não se relaciona*/
             top: 20px; /*aS divS se movem, respeitando a hierarquia*/
         }
 
@@ -35,7 +34,7 @@
             background-color: blueviolet;
             width:25px;
             height: 25px;
-            position: absolute; /* o elemento acompanha a pagina(documento)*/
+            position: absolute; /*o elemento acompanha a página (documento)*/
             bottom: 10px; /*controla a posição do elemento*/
             right: 10px;
         }

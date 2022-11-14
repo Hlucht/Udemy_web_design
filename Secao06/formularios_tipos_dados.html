@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrada de tipos de dados</title>
+</head>
+<body>
+    <h1>Exemplo de formulário</h1>
+    <form action="#" method="get" target="_blank">
+        <fieldset>
+            <legend>Exemplo</legend>
+            <br>
+
+            <!--alguns são apenas por semântica e a forma de apresentação / importante-->
+            <label>E-mail:</label>
+            <input type="email">
+            <br><br>
+
+            <label>Números:</label>
+            <input type="number" min="0" max="100">
+            <br><br>
+
+            <label>Data:</label>
+            <input type="date">
+            <br><br>
+
+            <label><input type="radio" name="alternativa" value="1">Alternativa 1</label>
+            <!--para selecionar apenas um, eles devem fazer parte do mesmo grupo atravéz do atributo 'name'-->
+            <!--aqui os elementos label + input fazem parte de um grupo só, se cliclar no label seleciona o input / atributo 'for'-->
+            
+            <label>Alternativa 2</label>
+            <input type="radio" name="alternativa" value="2"> <!--O 'value' diferencia a informação que o servidor irá receber-->
+        </fieldset>
+    </form>
+</body>
+</html>
