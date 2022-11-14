@@ -8,14 +8,14 @@
 </head>
 <body>
     <h1>Exemplo de formulário</h1>
-    <form action="#" method="get" target="_blank">
+    <form action="#" method="post" target="_blank">
         <fieldset>
             <legend>Exemplo</legend>
             <br>
 
             <!--alguns são apenas por semântica e a forma de apresentação / importante-->
             <label>E-mail:</label>
-            <input type="email">
+            <input type="email" required maxlength="10"> <!--torna obrigatório / tratamentos das informações / número máximo de letras-->
             <br><br>
 
             <label>Números:</label>
@@ -31,7 +31,38 @@
             <!--aqui os elementos label + input fazem parte de um grupo só, se cliclar no label seleciona o input / atributo 'for'-->
             
             <label>Alternativa 2</label>
-            <input type="radio" name="alternativa" value="2"> <!--O 'value' diferencia a informação que o servidor irá receber-->
+            <input type="radio" name="alternativa" value="2"> 
+            <br><br>
+            <!--O 'value' diferencia a informação que o servidor irá receber-->
+
+            <label>Selecionador</label>
+            <select name="selecionar" multiple> <!--opções para selecionar / seleciona mais de uma opção-->
+                <option value="Selecionador 1">Selecionador 1</option>
+                <option value="Selecionador 2">Selecionador 2</option>
+            </select>
+            <br><br>
+
+            <label><input type="checkbox" name="html" value="html">HTML</label>
+
+            <label><input type="checkbox" name="html" value="html">CSS</label>
+            <br><br>
+
+            <label for="msg">Texto</label><br>
+            <textarea name="msg" id="msg" cols="30" rows="5" style="resize: none;"></textarea><br><br> <!--'resize' tira a movimentação da 'textarea'-->
+
+            <label>Contrato</label><br>
+            <textarea name="msg" id="msg" cols="30" rows="5" readonly style="resize: none;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore tenetur corporis voluptatem quidem aperiam at debitis quibusdam incidunt amet quod illum consequuntur ipsam ullam ad, cupiditate eligendi, optio, assumenda dolores.</textarea><br> <!--apenas ler / desabilitado-->
+            <label><input type="checkbox" checked>Li e aceito</label><!--já inicia checado-->
+            <br><br>
+
+            <input type="submit"><!--enviar o formulário-->
+            <input type="button"><!--botão para tratar com js-->
+            <input type="reset"><!--Resetar o formulário-->
+            <br><br>
+
+            <input type="rang" min="0" max="10" step="2"> <!--pula de dois em dois e pode ser utilizado como atributo em outras tags-->
+            <input type="time">
+            <input type="color">
         </fieldset>
     </form>
 </body>
