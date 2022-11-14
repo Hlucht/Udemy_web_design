@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow</title>
+
+    <style>
+        div{
+            padding: 2%;
+            margin: 50px 2%;
+            border: 1px solid black;
+            width: 17%;
+            float: left;
+            height: 100px;
+            font-family: sans-serif;
+            font-size: 18px;
+        }
+        
+        .div1{
+            overflow: visible; /*o conteúdo que excede aparece na tela*/
+        }
+        
+        .div2{
+            overflow: hidden; /*escondeu uma parte do texto*/
+        }
+        
+        .div3{
+            overflow: scroll; /*cria uma barra de rolagem dentro do elemento para vizualizar todo o contuedo*/
+        }
+        
+        .div4{
+            overflow: auto; /*aplica barra de rolagem apenas onde precisa*/
+        }
+        
+    </style>
+
+</head>
+<body>
+    <div class="div1">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis excepturi, ducimus officia! Earum dicta provident dolor fuga rem, nisi ullam veniam cumque, repudiandae eligendi dignissimos accusamus ratione vero. Corrupti, impedit?</p>
+    </div>
+    
+    <div class="div2">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis excepturi, ducimus officia! Earum dicta provident dolor fuga rem, nisi ullam veniam cumque, repudiandae eligendi dignissimos accusamus ratione vero. Corrupti, impedit?</p>
+    </div>
+     
+    <div class="div3">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+    </div>
+    
+    <div class="div4">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+    </div>
+</body>
+</html>
