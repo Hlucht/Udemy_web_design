@@ -51,7 +51,7 @@
             <textarea name="msg" id="msg" cols="30" rows="5" style="resize: none;"></textarea><br><br> <!--'resize' tira a movimentação da 'textarea'-->
 
             <label>Contrato</label><br>
-            <textarea name="msg" id="msg" cols="30" rows="5" readonly style="resize: none;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore tenetur corporis voluptatem quidem aperiam at debitis quibusdam incidunt amet quod illum consequuntur ipsam ullam ad, cupiditate eligendi, optio, assumenda dolores.</textarea><br> <!--apenas ler / desabilitado-->
+            <textarea name="texto" id="msg" cols="30" rows="5" readonly style="resize: none;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore tenetur corporis voluptatem quidem aperiam at debitis quibusdam incidunt amet quod illum consequuntur ipsam ullam ad, cupiditate eligendi, optio, assumenda dolores.</textarea><br> <!--apenas ler / desabilitado-->
             <label><input type="checkbox" checked>Li e aceito</label><!--já inicia checado-->
             <br><br>
 
@@ -60,9 +60,16 @@
             <input type="reset"><!--Resetar o formulário-->
             <br><br>
 
-            <input type="rang" min="0" max="10" step="2"> <!--pula de dois em dois e pode ser utilizado como atributo em outras tags-->
+            <input type="hidden" name="expira" value="2023-12-01">
+
+            <input type="range" min="0" max="10" step="2"> pula de dois em dois e pode ser utilizado como atributo em outras tags <br>
             <input type="time">
-            <input type="color">
+            <input type="color"> <br><br>
+
+            <input type="submit">
+
+            <!--type: file - para quando precisar enviar um arquvio-->
+            <!--placeholder - dica no input-->
         </fieldset>
     </form>
 </body>
