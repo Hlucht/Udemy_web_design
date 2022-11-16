@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efeitos</title>
+
+    <style>
+        h1{
+            font-family: sans-serif;
+            text-align: center;
+            text-shadow: -1px -1px 0 purple, -2px -2px 0 rgb(193, 75, 193), -3px -3px 0 rgb(173, 5, 173), -4px -4px 0 rgb(216, 5, 216);
+        }
+
+        @font-face {
+            font-family: 'lilo';
+            src: url(fonts/nadia/nadia-serif.eot);
+            src: url(fonts/nadia/nadia-serif.woff) format('woff'), 
+            url(fonts/nadia/nadia-serif.ttf) format('ttf'), 
+            url(fonts/nadia/nadia-serif.svg) format('svg');
+        }
+        /*criar uma família de fonte personalizada e disponibilizar na internet / deve-se subir esse arquivo de fonte para o servidor / font squirrel / o bowser fará o download dos arquivos buscando o que ele tem suporte / format - o bowser vai saber que tipo é o arquivo e baixar apenas o que ele dá suporte*/
+
+
+        p{
+            font-family: lilo;
+        }
+    </style>
+</head>
+<body>
+    <h1>Texto</h1>
+     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus, accusamus accusantium itaque quibusdam nobis ducimus non assumenda nemo quod cupiditate deserunt perferendis. Consectetur optio saepe debitis similique numquam, expedita non?</p>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+
+    <style>
+        #exemplo{
+            width: 100px;
+            height: 100px;
+            background-color: chartreuse;
+            transition-property: width, height; /*propriedade que está sendo animada (width, heigth, all ...)*/
+            transition-duration: 1s, 3s; /*os valores são respectivos quando se quer animar mais que uma propriedade ao mesmo tempo e de formas diferentes*/
+            transition-timing-function: cubic-bezier(.67, -0.38, .5, 1.5); /*determina se a função acelera, desacelera, acelera-desacelera ... */
+            transition-delay: .5s, .8; /*atrasa o começo da transição*/
+        }
+
+        #exemplo:hover{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="exemplo">texto</div>
+</body>
+</html>

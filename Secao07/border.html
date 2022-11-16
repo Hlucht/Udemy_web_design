@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efeitos CSS</title>
+
+    <style>
+        h1, h2{
+            text-align: center;
+        }
+        #radius{
+            background: orange;
+            width: 200px;
+            height: 200px;
+            margin: 50px auto;
+            border-radius: 50px 100px / 100px 50px; /*lados com valores diferentes / sentido horário / explorar formas geométricas / valores antes da barra são horizontais e são respectivos depois da barra*/
+        }
+
+        #shadow{
+            background-color:blueviolet ;
+            width: 200px;
+            height: 200px;
+            margin: 50px auto;
+            box-shadow: 20px 10px 5px black, 5px -5px 5px red; /* deslocamento no eixo x / eixo y / esfumaçado / tamanho da sombra/ valores positivos e negativos/ mais de uma sombra no mesmo elemento*/ 
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS efeitos</h1> 
+
+    <h2>border-radius</h2>
+    <div id="radius"></div>
+
+    <h2>border-shadow</h2>
+    <div id="shadow"></div>
+</body>
+</html>
