@@ -1,7 +1,9 @@
+/*Tags principais*/
 body{
     font-family: 'Open Sans', sans-serif;
     color: #666;
     line-height: 2;
+    font-size: 90%;
 }
 
 a{
@@ -18,7 +20,7 @@ a:hover{
 h1, h2, h3, h4, h5, h6{
     color: #787878;
     font-weight: normal;
-    margin: 0 0 1em;
+    margin: 1em 0;
 }
 
 p{
@@ -48,6 +50,196 @@ pre code{
     display: block;
 }
 
+ul, ol{
+    margin: 0;
+    padding: 0;
+    padding-left: 1.1em;
+    list-style-position: inside;
+}
+
+input, label, textarea{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="radio"], input[type="checkbox"]{
+    width: auto;
+}/*selecionando atributo específico*/
+
+
+
+/*Listas*/
+.list-alternate{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.list-alternate li{
+    border-bottom: 3px solid #f4f2f2;
+}
+
+.list-alternate li:last-child{
+    border: 0;
+}/*seleciona o último filho da tag*/
+
+.ul-icons li {
+    list-style-type: none;
+    padding-left: 0;
+    display: inline-block;
+    font-size: 1.5em;
+    margin: 5px;
+    color: #49bf9d;
+}
+
+
+
+/*Grid*/
+.row{
+    overflow: auto;
+    display: flex;
+}
+
+.col{
+    width: 50%;
+}
+
+.col-2-3{
+    width: 65%; 
+}
+
+.col-1-3{
+    width: 32%;
+    margin-left: 3%;
+}
+
+.col-1-3 address{
+    position: relative;
+    top: 4.5em;
+    text-align: justify;
+    text-align: center;
+}
+
+.inner-col{
+    width: 48%;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.inner-col:first-child{
+    margin-right: 1em;
+}
+
+.inner-row{
+    margin-top: 1em;
+}
+
+.inner-row input, textarea{
+    padding: .5em;
+    border-radius: 8px;
+    border: 1px solid #cac9c9;
+}
+
+.send{
+    text-align: center;
+    width: 20%;
+}
+
+
+/*Imagens*/
+.card{
+    margin: 1em 3em 3em 0;
+}
+
+.text{
+    padding: 1em; 
+    background-color: rgb(247, 245, 245);
+}
+
+.link-img{
+    border: 0;
+}
+
+img{
+    display: block;
+    max-width: 100%; /*ajusta até o tamanho máximo da imagem*/
+    border-radius: 5px 5px 0 0;
+}
+
+.main-header img{
+    border-radius: 50%;
+}
+
+
+
+/*Botões*/
+.button-default{
+    margin-top: 1em;
+    background-color: #49bf9d;
+    border: 2px solid #49bf9d;
+    color: white;
+    padding: .5em 2em;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+}
+
+.button-default-stroke{
+    background-color: white;
+    color: inherit;
+    border: 1px solid #d8d5d5;
+}
+
+.button-default-small{
+    font-size: .8em;
+}
+
+.button-default-full{
+    display: block;
+    text-align: center;
+    margin-top: 1em;
+}
+
+
+
+/*Tabelas*/
+.table{
+    width: 100%;
+    margin: 0 0 2em 0;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.table th{
+    background-color: rgb(244, 244, 244);
+    padding: .5em;
+}
+
+.table td{
+    padding: .5em;
+}
+
+.table tbody tr:first-child td{
+    border-top: 1px solid rgb(221, 219, 219);
+}
+
+.table tbody tr:last-child td{
+    border-bottom: 1px solid rgb(221, 219, 219);
+}
+
+.table tbody tr td{
+    border-bottom: 1px solid rgb(230, 228, 228);
+}
+
+.table tbody tr:nth-child(odd) td{
+    background-color: rgb(230, 228, 228);
+}/*pseudo-classe que seleciona filhos específicos 'odd-ímpares' 'even-pares'*/
+
+.table-alternate tbody td{
+    border: 1px solid rgb(230, 228, 228);
+}
+
+
+/*Mains*/
 .main-header{
     position: fixed;
     top: 0;
@@ -86,4 +278,8 @@ pre code{
    position: relative;
    left: 35%;
    box-sizing: border-box;
+}
+
+.main-cards{
+    margin-top: 3em;
 }
