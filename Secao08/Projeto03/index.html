@@ -148,7 +148,7 @@
         
                         <p>
                             <span>Telefone</span>
-                            000-000-000
+                            (00) 0000-0000
                         </p>
         
                         <p>
@@ -158,10 +158,8 @@
                     </address>
                 </div>
             </div>
-
-
-            
         </section>
+
 
         <section class="main-content-text">
             <h3>Elements</h3>
@@ -186,8 +184,10 @@
             <h4>Heading Level 4</h4>
             <h5>Heading Level 5</h5>
             <h6>Heading Level 6</h6>
+            <br>
 
             <hr>
+            <br>
 
             <p>Blockquote</p>
             <blockquote cite="#">
@@ -195,9 +195,9 @@
             </blockquote>
             <!-- <q cite="#"></q> -->
             
+            <br>
             <h4>Preformatted</h4>
-            <pre>
-                <code> <!--dentro da tag 'pre' a tabulação não é utilizável-->
+            <pre><code> <!--dentro da tag 'pre' a tabulação não é utilizável-->
         Lorem ipsum dolor sit amet consectetur adipisicing elit. 
         Ullam fuga dolor quo, nam laborum fugiat 
         necessitatibus eaque provident ex enim? Eligendi ut aliquid rerum provident. 
@@ -408,41 +408,46 @@
             <h5>Forms</h5>
 
             <form action="#" method="get">
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name" placeholder="Name">
+                <div class="forms">
+                    <input type="text" name="name" id="name" placeholder="Name">
 
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="Email">
+                    <input type="email" name="email" id="email" placeholder="Email">
 
-                <select name="category" id="category">
-                    <option value="category1">Category 1</option>
-                    <option value="category2">Category 2</option>
-                    <option value="category3">Category 3</option>
-                    <option value="category4">Category 4</option>
-                </select>
+                    <select name="category" id="category">
+                        <option value="category1">Category 1</option>
+                        <option value="category2">Category 2</option>
+                        <option value="category3">Category 3</option>
+                        <option value="category4">Category 4</option>
+                    </select>
 
-                <label><input type="radio" value="low" name="priority">Low Priority</label>
+                    <label><input type="radio" value="low" name="priority"> Low Priority</label>
 
-                <label><input type="radio" value="low" name="priority">Normal Priority</label>
+                    <label><input type="radio" value="low" name="priority"> Normal Priority</label>
 
-                <label><input type="radio" value="low" name="priority">High Priority</label>
-                <!--no mesmo grupo atravéz do 'name'/ seleciona apenas um-->
+                    <label><input type="radio" value="low" name="priority"> High Priority</label>
+                    <!--no mesmo grupo atravéz do 'name'/ seleciona apenas um-->
 
-                <label><input type="checkbox" name="copy">Email me a copy of this message</label>
+                    <div class="forms-confirm">
+                        <label><input type="checkbox" name="copy" checked>  Email me a copy of this message</label>
 
-                <label><input type="checkbox" name="human">I am a human and not a robot</label>
+                        <label><input type="checkbox" name="human">  I am a human and not a robot</label>
+                    </div>
+                    <br>
 
-                <label for="message">Message</label>
-                <textarea name="text" id="text" cols="30" rows="10" placeholder="Enter your message"></textarea>
+                    <textarea name="text" id="text" cols="30" rows="10" placeholder="Enter your message"></textarea>
 
-                <input type="submit" class="button-default" value="send">
-                <input type="reset" class="button-default-stroke" value="reset">
+                    <div class="forms-button">
+                        <input type="submit" class="button-default" value="send">
+                        <input type="reset" class="button-default-stroke" value="reset">
+                    </div>
+                    
+                </div>
             </form>
         </section>
 
 
         <section>
-
+            <br><br>
             <h3>Images</h3>
 
             <h4>Fit</h4>
@@ -460,6 +465,7 @@
                 <img src="imagens/thumbs/06.jpg" alt="image street">
             </div>
 
+            <br><br>
             <h4>Left &amp; Right</h4>
 
             <p>
