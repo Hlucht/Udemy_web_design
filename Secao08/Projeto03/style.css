@@ -67,8 +67,11 @@ input[type="radio"], input[type="checkbox"]{
 }/*selecionando atributo específico*/
 
 span{
-    display: none;
-}
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    display: block;
+}/*torna um elemento invisivel apenas visualmente / leitor de tela ainda lê*/
 
 
 /*Listas*/
@@ -247,6 +250,7 @@ img{
     display: inline-block;
     text-align: center;
     transition: all .2s;
+    cursor: pointer;
 }
 
 .button-default:hover{
@@ -255,9 +259,10 @@ img{
 }
 
 .button-default-stroke:hover{
-    border: 3px solid #49bf9d;
+    border: 1px solid #49bf9d;
     color: #49bf9d;
     transition: all .2s;
+    background-color: white;
 }
 
 .button-default-stroke{
@@ -364,4 +369,15 @@ img{
 
 .main-content-text{
     margin-top: 5em;
+}
+
+/*rodape*/
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: 35%;
+    left: 0;
+    padding: 7% 0 0 5% ;
+    box-sizing: border-box;
+    text-align: right;
 }
