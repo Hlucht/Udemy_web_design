@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilo de Checkbox</title>
+
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+
+        label{
+            margin-right: 20px;
+        }
+
+        label span{
+            display: inline-block;
+            width: 60px;
+            height: 30px;
+            background-color: #ccc;
+            border-radius: 15px;
+        }
+
+        label span:before{
+            content: '';
+            display: block;
+            background-color: #eee;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin: 4px;
+            transform: all 1s linear;
+        }
+
+        label input:checked + span:before{
+            transform: translateX(30px);
+            background: grey;
+        }/*seleciona o elemento 'before' da 'span' que vem imediatamente depois de um 'input' que está checado*/
+
+        label input:focus + span{
+            border: 1px solid rgb(128, 136, 143);
+            box-sizing: border-box;
+        }/*acessibilidade*/
+
+        input{
+            opacity: 0;
+        }/*esconder o checkbox / acessibilidade*/ 
+    </style>
+</head>
+<body>
+    <h1>Copa</h1>
+
+    <label>
+        <input type="checkbox">
+        <span></span>
+        Brasil
+    </label>
+
+    <label>
+        <input type="checkbox">
+        <span></span>
+        Argentina
+    </label>
+
+    <label>
+        <input type="checkbox">
+        <span></span>
+        França
+    </label>
+</body>
+</html>
