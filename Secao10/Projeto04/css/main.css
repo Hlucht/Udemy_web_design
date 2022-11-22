@@ -187,18 +187,23 @@ h1, h2, h3, h4, h5, h6{
 /*Break-point 1*/
 @media screen and (min-width: 48.75em){
     
+    .button{
+        margin: 1em;
+    }
+
     .top-header-logo{
         float: left;
     }
     
     .icon-play{
         display: block;
+        height: 6em;
     }
     
     .top-nav{
         background: transparent;
         float: right;
-        margin-top: 25px;
+        margin-top: 17px;
     }
     
     .top-nav ul{
@@ -216,6 +221,7 @@ h1, h2, h3, h4, h5, h6{
 
     .top-nav a:hover{
         background: #e7d9fc;
+        border-radius: .5em;
     }
     
     .top-content{
@@ -228,8 +234,8 @@ h1, h2, h3, h4, h5, h6{
     }
     
     .col-1_4{
-        width: 44%;
-        margin: 3%;
+        width: 40%;
+        margin: 5%;
         float: left;
     }
     
@@ -254,6 +260,7 @@ h1, h2, h3, h4, h5, h6{
         height: 20em;
         padding-top: 17em; 
     }
+
 }
     
 
@@ -263,7 +270,7 @@ h1, h2, h3, h4, h5, h6{
 
     .top-content{
         background-image: url(../images/bg_topo_1600x1374.jpg);
-        padding: 19em 20em 10em;
+        padding: 17em 20em 10em;
         background-position: center top;
     }
     
@@ -272,8 +279,8 @@ h1, h2, h3, h4, h5, h6{
     }
     
     .col-1_4{
-        width: 23%;
-        margin: 1%;
+        width: 20%;
+        margin: 2.5%;
     }
     
     .col-1_2{
@@ -285,6 +292,13 @@ h1, h2, h3, h4, h5, h6{
     .main-content-article .button{
         float: none;
     }
+
+    .footer p{
+        width: 80%;
+        margin: auto;
+        margin-top: 1em;
+    }
+    
 }
     
     
