@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
+    <title>Counter</title>
+
+    <style>
+        #grupo-cores{
+            padding: 15px;
+            background: url(tile.png);
+            counter-reset: contador; /*aqui criou o contador*/
+        }
+
+        #grupo-cores div{
+            width: 80%;
+            height: 150px;
+            border: 10px solid rgba(0,0,0,.5);
+            margin: 20px auto;
+            padding: 15px;
+            counter-increment: contador;/*aqui a cada div incrementa um*/
+        } 
+
+        #grupo-cores div:before{
+            content: '['counter(contador)']';
+        }
+
+        #grupo-cores div:nth-child(2){
+            background-color: aquamarine;
+            background-clip: content-box; /*content-box - apenas o container / padding-box - container + padding*/
+        }
+
+        #grupo-cores div:nth-child(3){
+            background-image: linear-gradient(60deg, blue, aqua), 
+            linear-gradient(to top, rgb(0, 255, 68), transparent);/*muda a direção / mais que um gradiente / transparencia*/
+            background-clip: content-box, border-box;
+        }
+
+        #grupo-cores div:nth-child(4){
+            background-image: radial-gradient(circle, red pink);/*sempre circular*/
+            background-image: radial-gradient( red pink);/*possivel adicionar mais cores e a porcentagem de cada cor / esta em ellipse*/
+        }
+
+        #grupo-cores div:nth-child(5){
+            background-image: radial-gradient(closest-side at 20%  50%, red, pink, rgb(143, 17, 38), rgb(236, 15, 52));
+        }/*o ponto inical começa no X20% Y50%*/
+
+        #grupo-cores div:nth-child(6){
+            background-image: radial-gradient(farthest-side, red, pink, rgb(143, 17, 38), rgb(236, 15, 52));
+        }
+
+        #grupo-cores div:nth-child(7){
+            background-image: radial-gradient(farthest-corner at 20%  90%, red, pink, rgb(143, 17, 38), rgb(236, 15, 52));
+        }
+
+        #grupo-cores div:nth-child(8){
+            background-image: repeating-linear-gradient(red 0%, yellow 10%, blue 50%);
+        }/*repete até alcançar 100% / usa o mesmo conceito com 'radial-gradiente'*/
+    </style>
+</head>
+<body>
+    <h2>Backgrounds, cores e gradientes</h2>
+    <p>Names, hexadecimais, RGB, RGBa, HSL, HSLa</p>
+    
+    <div id="grupo-cores">
+        <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum magni</p></div>
+        <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum magni</p></div>
+        <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum magni</p></div>        
+        <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum magni</p></div>        
+        <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum magni</p></div>
+        <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum magni</p></div>        
+        <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum magni</p></div>
+        <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum magni</p></div>          
+    </body>
+</html>
