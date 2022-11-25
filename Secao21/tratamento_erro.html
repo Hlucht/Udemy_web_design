@@ -19,9 +19,9 @@
 <script>
 
     function mostrarAreaAlert(){
-        var largura = parseFloat(prompt("Digite a largura"));
+        var largura = prompt("Digite a largura");
 
-        var altura = parseFloat(prompt("Digite a altura"));
+        var altura = prompt("Digite a altura");
 
         /*interceptando um possivel erro*/
         try{
@@ -35,10 +35,11 @@
     }
 
     function mostrarAreaOutput(){
-        var largura = parseFloat(prompt("Digite a largura"));
+        var largura = prompt("Digite a largura");
 
-        var altura = parseFloat(prompt("Digite a altura"));
+        var altura = prompt("Digite a altura");
 
+        console.log(altura, largura);
         /*interceptando um possivel erro*/
         try{
             var area = calculaArea(largura, altura);
@@ -51,13 +52,13 @@
     }
 
     function calculaArea(largura, altura){
-        if(largura === undefined || altura === undefined){
+        if(largura ===  "" || altura === ""){
             throw new Error('É preciso dois números');
         }
 
-        // if(isNaN(largura) || isNaN(altura)){
-        //     throw new Error('Apenas números'); /*tratamento de erro / aparece no console*/
-        // }
+       if(isNaN(largura) || isNaN(altura)){
+            throw new Error('Apenas números'); /*tratamento de erro / aparece no console*/
+        }
         return largura * altura;
     }
 </script>
