@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniversário</title>
+</head>
+<body>
+    <h1>Quantos dias faltam para o meu aniversário</h1>
+    <h2>Verificar no console</h2>
+    <script>       
+        (function(){
+            var dataAtual = new Date(); /*recebe dat atual*/
+            dataAtual.setHours(0);
+            dataAtual.setMinutes(0);
+            dataAtual.setSeconds(0);
+            dataAtual.setMilliseconds(0);
+
+            var anoAtual = dataAtual.getFullYear(); /*seleciona apenas o ano*/               
+                    
+            var dataNiver = new Date(anoAtual, 1, 10);
+            
+            var dataAtualTS = dataAtual.getTime(); /*timestemp*/
+            var dataNiverTS = dataNiver.getTime();
+            
+            if (dataNiverTS === dataAtualTS){
+                alert('Parabens pelo seu aniversario');
+                return;
+            }
+            
+            if(dataNiverTS < dataAtualTS){
+                dataNiver.setFullYear(++anoAtual); /*primeiro soma um, depois incrementa na função*/
+                dataNiverTS = dataNiver.getTime();
+            }
+            
+            const UM_DIA_TS  = 24 * 60 * 60 * 1000;
+            var diferenca = dataNiverTS - dataAtualTS;
+            console.log(diferenca / UM_DIA_TS+ " dias");                        
+        })()        
+    </script>
+</body>
+</html>
