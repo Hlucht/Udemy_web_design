@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação de formulário</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Validação de Formulário</h1>
+        
+        <form action="#" method="post"><!--as informações não são mais mostradas na url-->
+            <label for="User">Usuário</label>
+            <input type="text" id="User" name="user">
+            <br><br>
+
+            <label for="Pass">Senha</label>
+            <input type="password" id="Pass" name="pass">
+            <br><br>
+
+            <button type="submit" id="button">Logar</button><!--'submit' para realmente enviar o formulário-->
+        </form>
+    </div>
+    
+    <script>
+        (function(){
+            'use strict';
+            var $form = document.querySelector('form')
+            var $User = document.getElementById('User');
+            var $Pass = document.getElementById('Pass');
+            var $button = document.getElementById('button');
+            
+            // $button.addEventListener('click', function(){
+            //     if(!$User.value || !$txtPass.value){
+            //         alert('Preencha todos os campos!');
+            //     }
+            // });  /*monitoramento / string vazia é considerada boleano falso / evento está atrlado no click do botão e não no envio do formulário*/
+            
+            $form.addEventListener('submit', function(e){
+                if(!$User.value || !$txtPass.value){
+                    alert('Preencha todos os campos!');
+                    e.preventDefault(); /*não premite o envio / o comportamento padrão*/
+                }
+            }); /*evento atrelado ao form e ao envio propriamente / se o Objeto Evento irá ser utilizado, ele deve ser passado como parâmetro na 'function'*/
+        })()
+    </script>
+</body>
+</html>

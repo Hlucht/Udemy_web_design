@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem de caracter</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Curso Javascript Completo 2018</h1>
+        
+        <textarea id="msg" cols="50" rows="10" maxlength="100"></textarea>
+        
+        <div id="restaCaracter" style="display: none;">Restam <span id="resta"></span> caracteres</div>
+    </div>
+    
+    <script>
+        (function(){
+            'use strict';
+            /*recuperando os elementos html para o js*/
+            var $Msg = document.getElementById('msg');
+            var $restaCaracter = document.getElementById('restaCaracter');
+            var $resta = document.getElementById('resta');
+            var maxima = $Msg.maxLength; /*associado ao maxlength do elemento html*/
+
+
+            function elementoCaracterRestante(){
+                $restaCaracter.style.display = 'block';
+            } /*caso haja js / se não, funciona apenas com html / estilo 'inline'*/
+
+            elementoCaracterRestante();
+
+            mostrarCaracteresRestantes(maxima);
+            $Msg.addEventListener('input', checkLength); 
+            /*o evento que será monitorado é de qualquer tipo de entrada de dado / relacionado ao teclado*/
+
+
+            function checkLength(e){
+                var caracterDigitado = this.value.length; /*o valor(texto) que o 'textarea' possui*/
+                var caracteresRestantes = parseInt(maxima) - parseInt(caracterDigitado);
+                mostrarCaracteresRestantes(caracteresRestantes);
+            }
+
+            function mostrarCaracteresRestantes(n){
+                $resta.textContent = n;
+            }
+        })()       
+    </script>
+</body>
+</html>

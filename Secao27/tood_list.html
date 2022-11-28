@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tood List</title>
+
+    <style>
+        .done{
+            text-decoration: line-through;
+            color: #555;
+        }
+   </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Task List</h1>     
+        
+        <input type="text" id="inputTask">
+        <button id="btn">Adicionar Tarefa</button>       
+        
+        <ul>
+            <li>Tarefa 1</li>
+            <li>Tarefa 2</li>
+            <li>Tarefa 3</li>
+        </ul>
+    </div>
+
+    <script>            
+        (function(){
+            'use strict';
+            
+            var $ul = document.querySelector('ul');
+            var $lis = $ul.querySelectorAll('li'); /*seleciona todas as 'li'*/
+            var $inputTask = document.querySelector('#inputTask');
+            var $btn = document.querySelector('#btn');
+            
+            $btn.addEventListener('click', addTask);
+            
+            $inputTask.addEventListener('keyup', function(e){
+                if(e.keyCode === 13) {
+                    addTask();
+                }
+            });
+            
+            $ul.addEventListener('click', function (e){
+                if(e.target.nodeName === 'LI'){           
+                    removeTask(e.target);            
+                }
+            })
+            
+            function removeTask(li){
+                if(confirm('deseja realmente excluir a tarefa \n'+ li.textContent +'?')){
+                    console.log(li.parentNode);
+                    li.parentNode.removeChild(li);
+                }
+            }
+            
+            function addTask(){        
+                var li = document.createElement('li'); /*cria elemento*/
+                var text = document.createTextNode($inputTask.value);/* É usado para fornecer texto a um elemento. Este método contém os valores de texto como parâmetro do tipo string*/      
+                li.appendChild(text);        
+                $ul.appendChild(li);        
+                $txtTask.value = '';
+                $txtTask.focus();
+            } 
+        })()                    
+    </script>
+</body>
+</html>
