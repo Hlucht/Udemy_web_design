@@ -84,14 +84,14 @@ img{
 }
 .js .laptop-slider .slideshow{
     position: relative;
-    width: 100%;
+    /* width: 100%; */
     margin: auto;
     max-width: 950px;
 }
 .js .laptop-slider figure{
     opacity: 0;
     transition: 1s opacity;
-    width: 100%;
+    /* width: 100%; */
     position: absolute;
     top: 0;
     left: 0;
@@ -449,8 +449,6 @@ img{
 .no-js .prev, .no-js .next, .no-js .header__btnMenu{
     display: none;
 }
-
-
 
 
 
